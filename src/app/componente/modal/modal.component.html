@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Confirmación
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p>{{ mensaje }}</p>
+
+  <img *ngIf="image" [src]="image" alt="Foto">
+  <ion-button (click)="cerrarModal(true)">Confirmar</ion-button>
+  <ion-button (click)="cerrarModal(false)">Cancelar</ion-button>
+</ion-content>

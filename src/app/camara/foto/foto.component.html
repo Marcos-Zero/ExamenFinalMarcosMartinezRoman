@@ -1,0 +1,10 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> CAMARA</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-button (click)="tomarFoto()"></ion-button>
+
+  <img *ngIf="foto !null" [src]="foto.webPath" alt="Foto"/>

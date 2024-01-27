@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { FotoComponent } from './camara/foto/foto.component';
 
 export const routes: Routes = [
   {
@@ -10,4 +11,17 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'formulario',
+    loadComponent: () => import('./paginas/formulario/formulario.page').then( m => m.FormularioPage)
+  },
+  {
+    path: 'usuario',
+    loadComponent: () => import('./paginas/usuario/usuario.page').then( m => m.UsuarioPage)
+  },
+  {
+    path: 'foto',
+    component: FotoComponent,
+  }
+  
 ];

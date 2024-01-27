@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Publicacion
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Título (mínimo 5 caracteres)</ion-label>
+    <ion-input [(ngModel)]="nuevoAviso.titulo" minlength="5" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Descripción (mínimo 20 caracteres)</ion-label>
+    <ion-textarea [(ngModel)]="nuevoAviso.descripcion" minlength="20" required></ion-textarea>
+  </ion-item>
+
+  <ion-buttons>
+    <ion-button (click)="tomarFoto()">
+      <ion-icon name="camera-outline"></ion-icon>
+      FOTOGRAFIA
+    </ion-button>
+    <img *ngIf="foto" [src]="foto.webPath" alt="Foto" width="100" height="100"/>
+  </ion-buttons>
+
+ 
+  
+  <ion-buttons>
+    <ion-button (click)="agregarAviso()">Guardar</ion-button>
+    <ion-button [routerLink]="['/usuario']">Volver</ion-button>
+  </ion-buttons>
+</ion-content>
+
+<ion-img *ngIf="foto" [src]="foto" alt="Foto"></ion-img>
